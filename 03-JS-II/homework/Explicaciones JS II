@@ -1,0 +1,24 @@
+        For loop
+The for loop will allow you to repeat an action the times that you want. It has the for keyword, and then inside of parenthesis you´ll have to put the counter variable (a convention to name this variable is name it "i"), the condition for the counter variable and the increment or decrement of the variable.
+Lets say you want to print into the web browser the same message five times, instead to do it manually you can use a for loop.
+
+for (counter variable; condition; increment/decrement) {
+        block of code that you wanna print;
+}
+
+for (let i = 0; i < 5; i++) {
+        console.log (print this [i] times)
+}
+
+This will print into the console:
+print this 1 times
+print this 2 times
+print this 3 times
+print this 4 times
+
+
+        Logical Operators.
+
+        && Operator.
+This operator is used to compare values and can return a boolean value, or the type of value assigned to the operator.
+This operator will return true, only if both values are true. And if one of this values is false, it will return false.

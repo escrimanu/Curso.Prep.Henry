@@ -1,0 +1,74 @@
+        Variables:
+Una variable es como una caja la cual tiene un nombre y tiene algo dentro. Por ejemplo podrías tener una caja que se llama "juguetes", y dentro de esa caja están tus autitos, soldaditos, rompecabezas y figuritas. Vos cuando quieras podes cambiar el nombre de esa caja y lo que tiene dentro, por ejemplo dentro de unos años te das cuenta que los soldaditos no te gustan mas, entonces podes sacarlos de esa caja y poner en su lugar otro juguete, como un Rasti.
+Hay distintos tipos de variables, tenés las que podes cambiar su contenido (como la caja de juguetes) y las que no. Un ejemplo de las que no podés cambiar lo que tiene dentro sería tu fecha de nacimiento, siempre va a ser la misma.
+
+Para el ejemplo de la caja de juguetes, primero tenés que usar la palabra clave "var" o "let" (las diferencias entre ambas es que tienen distinto rango dentro de un bloque de código), después el nombre de la variable, en este caso "juguetes" (no podés repetir el nombre, así que si tenés muchas cajas de juguetes podes usar los nombres "juguetes1, juguetes2" etc.).  Después tenés que usar signo igual para decir que hay dentro de la caja, por ejemplo "autitos".
+
+let juguetes = "autitos";
+var juguetes1 = "soldaditos";
+
+En el caso del libro que vas a usar durante todo el año, sería de la misma manera que la anterior. La diferencia es que durante el tiempo que tengas que usarlo, el libro no va a cambiar.
+
+const fechaDeNacimiento = "12/01/2009";
+
+Algo en lo que se han puesto de acuerdo los programadores es que al final de una variable se debe usar punto y coma para indicar el fin de la misma. Y también, al nombrar una variable se debe utilizar la primer letra de la misma en minúscula y si es una frase, se deben eliminar los espacios y utilizar mayúsculas a partir de la seguna palabra. Como lo hice en el caso de "fechaDeNacimiento".
+
+
+        Strings:
+En la computación un string es una cadena de caracteres que puede ser cualquier texto. Las variables anteriores son cadenas de texto, por ende son strings. Un string puede contener letras, números, símbolos y espacios entre los mismos.
+Otro ejemplo de un string es tu nombre, tu apellido y tu edad.
+You can declare a string using quotation marks, or with a literal template.
+
+En mi caso serían los siguientes:
+const miNombre = "Manuel";          //No tengo pensado cambiar mi nombre, entonces va a ser constante durante mi vida. No va a cambiar.
+const miApellido = "Escribano";     //Tampoco tengo pensado cambiar mi apellido, va a ser constante.
+const cuandoNaci = "21/09/1992";    //Y mi fecha de nacimiento no puedo cambiarla. Acá, tenemos números y caracteres.
+var miEdad = 28                     //En cambio, mi edad va a ser distinta con el pasar de los años, por ende es un valor que al pasar los años va a variar.
+
+
+        Funciones:
+Una función es una pieza de código que puede ser reutilizada luego. Necesita de una entrada (o input) y retorna algo (output). 
+Hay distintas maneras de declarar una función. Puede ser una function declaration, expression or an arrow function. 
+In the function declaration you will need the function keyword, the name of the function that you want to have give it followed by the parameters inside parenthesis and each one separated by a comma. This type of function can be called or invoked before it has been declared.
+In the function expression, the function goes stored into a variable (could be var, let or const depending on what you need to use) but it goes without a function name.
+And the arrow function doesn´t have the function keyword and it goes stored into a variable. This is great for a quick one-line code functions.
+
+Imagine a function as a machine, where you put some ingredients and it returns something. For example a fruit processor, you will put some fruits into it and it will return juice for you.
+
+-Function declaration:
+function fruitProcessor (apples, oranges) {
+    let juice = `Juice made with ${apples} apples and ${oranges} oranges`;
+    return juice;
+} //Here we use the function keyword and the parameters goes inside parenthesis (which in this case are apples and oranges) then, goes the body of the fuction between curly braces. At the last part of the function body we have the return keyword, this will return the juice of the fruit processor.
+
+-Function expression:
+const fruitProcessor = function (apples, oranges) {
+    let juice = `Juice made with ${apples} apples and ${oranges} oranges`;
+    return juice;
+}; //And here we store the function into a variable also named fruitProcessor.
+
+-Arrow function:
+const fruitProcessor = (apples, oranges) =>  `Juice made with ${apples} apples and ${oranges} oranges`;
+//The arrow function goes stored into a variable, the parameters goes after the first equal symbol (if you have to put only one parameter you don´t need the parenthesis, but if you have more than one you have to put it), then the equal and bigger than symbol "=>", and in this part you dont need to write the return keyword, this type of function does it implicitly.
+
+If we want to make juice with the fruit processor, we have to call the function. And we do this by writting the function name and giving it the arguments (which in this case are the values of the oranges and apples).
+fruitProcessor(2, 5);   //In all cases it will return the same "Juice made with 2 apples and 5 oranges"
+
+
+        If statements
+Suppose are in yuor home afther the school and you want to play video games, and you ask for it to your mom or dad, and they tell you that you can play only if you finish your homework and if you don´t finish it, you will have to finish it. An if else statement will allow you to do something if the a condition is true, and if it isn´t you will have to do something else.
+You have to use the if keyword to start the statement, then the condition goes between parenthesis, then goes the action to do ONLY if the condition is true. And if this condition is false, you will have to do something else.
+
+if (iFinishedMyHomework === true) {                     //If the condition is true, you can play video games.
+        play video games;
+        } else if (iFinishedMyHomework === false) {     //And if it is false, you have to do your homework.
+                do the homework;
+        }
+
+
+        Boolean Data Type
+A boolean data type can have only two values, true or false. For example, when you have to take an exam are two possibilities, approve or disapprove. Imagine that you have taken exams in your school, there are two possibilities, approve or disapprove, true or false.
+
+englishExam = true;             //Following the example above, in this case you approve the exam.
+geographyExam = true;           //Following the example above, in this case you approve the exam.
+mathematicsExam = false;        //Following the example above, in this case you disapprove the exam.

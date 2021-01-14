@@ -9,7 +9,7 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  return array[array.length -1];
+  return array[array.length - 1];
 }
 
 function obtenerLargoDelArray(array) {
@@ -34,9 +34,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array.push (elemento);
+  array.push(elemento);
   return array;
-
 }
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -54,15 +53,15 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  return palabras.join (" ");
+  return palabras.join(" ");
 }
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  return array.includes (elemento);
-  }
+  return array.includes(elemento);
+}
 
 function agregarNumeros(numeros) {
   // "array" debe ser una matriz de enteros (int/integers)
@@ -70,7 +69,7 @@ function agregarNumeros(numeros) {
   // Tu código:
   var sumaArray = 0;
   for (var i = 0; i < numeros.length; i++) {
-    sumaArray = sumaArray + numeros[i];
+    sumaArray += numeros[i];
   }
   return sumaArray;
 }
@@ -79,7 +78,7 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-return agregarNumeros(resultadosTest) / resultadosTest.length;
+  return agregarNumeros(resultadosTest) / resultadosTest.length;
 }
 
 function numeroMasGrande(numeros) {
@@ -87,27 +86,29 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
   // maximo = [3, 5, 7, 2];
-  var maximo = numeros [0];
-  for (var i = 1; i < numeros.length; i++) {
-    if (numeros [i] > maximo) {
-      maximo = numeros [i];
-    }
-  }
-  return maximo;
+  // var maximo = numeros [0];
+  // for (var i = 1; i < numeros.length; i++) {
+  //   if (numeros [i] > maximo) {
+  //     maximo = numeros [i];
+  //   }
+  // }
+  // return maximo;
+  let max = Math.max(...numeros);
+  return max;
 }
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0
-  // Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0
+  // Si se pasa un argumento, simplemente devuélvelo
   // Tu código:
   //multipl = [2, 3, 4, 5]
-if (arguments.length < 1) return 0;
-var multipl = 1;
-for (var i = 0; i < arguments.length; i++) {
-  multipl = multipl * arguments[i];
-}
-return multipl;
+  if (arguments.length < 1) return 0;
+  var multipl = 1;
+  for (var i = 0; i < arguments.length; i++) {
+    multipl *= arguments[i];
+  }
+  return multipl;
 }
 
 // No modificar nada debajo de esta línea

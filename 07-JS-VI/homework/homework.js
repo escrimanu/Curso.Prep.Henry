@@ -2,9 +2,7 @@
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`
-
-cb ();
-
+  cb();
 }
 
 function sumarArray(numeros, cb) {
@@ -12,16 +10,16 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
 
-var suma = numeros.reduce (function (acc, cur) {
-  return acc + cur;
-});
-cb (suma);
+  var suma = numeros.reduce(function (acc, cur) {
+    return acc + cur;
+  });
+  cb(suma);
 }
 
 function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
-  array.forEach (function(cur,idx) {
+  array.forEach(function (cur) {
     return cb(cur);
   });
 }
@@ -31,12 +29,11 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
 
-  var newArray = array.map (function(cur) {
-  return cb (cur);
+  var newArray = array.map(function (cur) {
+    return cb(cur);
   });
   return newArray;
 }
-
 
 // No modificar nada debajo de esta línea
 // --------------------------------
@@ -46,4 +43,4 @@ module.exports = {
   sumarArray,
   forEach,
   map,
-};  
+};
